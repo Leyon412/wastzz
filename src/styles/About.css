@@ -1,0 +1,112 @@
+/* About.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image:url('/src/images/paper-1074131_1920.jpg') /* Set a light background color for the body */
+}
+
+.k h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Your Chosen Font', sans-serif; /* Specify your desired font family */
+    color: #333; /* Set the font color */
+}
+.k h2{
+    padding-left: 30px;
+}
+.section {
+    margin-bottom: 20px;
+}
+.card span {
+    font-weight: bold;
+    color: #3498db; 
+    padding-top: 20px;/* Set a different color for the highlighted name */
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Set a white background color for cards */
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Increase the size on hover for a interactive effect */
+}
+
+.card img {
+    max-width: 90%;
+    max-height: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.details-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque white background */
+    backdrop-filter: blur(5px); /* Apply a blur filter to the background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.details-card {
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(97, 92, 92, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.details-card p {
+    font-family: 'Your Chosen Font', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.details-card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+

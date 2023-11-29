@@ -1,0 +1,60 @@
+/* Home.css */
+.home-container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+  }
+  
+  .background-image {
+    background-image: url('/src/images/nature-7038455_1920.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+/* Home.css */
+.centered-text {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    /* Make the text more bright and prominent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    background-color: rgba(97, 92, 92, 0.3); /* Adjust the alpha (fourth parameter) for the opacity */
+    padding: 20px; /* Adjust padding for desired spacing */
+    border-radius: 10px;
+  }
+  
+  
+  .centered-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .centered-text p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .centered-text {
+      padding: 0 20px;
+    }
+  
+    .centered-text h1 {
+      font-size: 2.5rem;
+    }
+  
+    .centered-text p {
+      font-size: 1.2rem;
+    }
+  }
+  

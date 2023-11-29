@@ -1,0 +1,26 @@
+/* Footer.css */
+
+.footer {
+    background-color: #e6dcdc;
+    color: rgb(13, 13, 13);
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    background-color: #fbf8f8;
+    text-align: center;
+    padding: 5px 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px 10px;
+    }
+  
+    .footer-bottom {
+      padding: 5px;
+    }
+  }
+  
