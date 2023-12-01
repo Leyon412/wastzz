@@ -1,0 +1,46 @@
+/* Services.css */
+
+/* Common styles for all screen sizes */
+.waste-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .waste-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .waste-form input {
+    width: calc(100% - 16px); /* Adjusted width to account for padding */
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  .waste-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .waste-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive styles for screens with a maximum width of 600 pixels or less */
+  @media (max-width: 600px) {
+    .waste-form {
+      max-width: 90%;
+    }
+  }
+  

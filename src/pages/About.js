@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <div className='k'>
-      <h1>About Waste Management</h1>
+      <h1> Waste Management</h1>
 
       {/* Types of Waste Cards */}
       <div className="section">
