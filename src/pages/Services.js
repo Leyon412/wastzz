@@ -1,80 +1,68 @@
-// src/components/WasteForm.js
+// Services.js
+
 import React, { useState } from 'react';
+import WasteCollectionForm from '../components/WasteCollectionForm';
+import InternshipForm from '../components/InternshipForm';
 import '../styles/Services.css';
+import '../styles/WasteCollectionForm.css';
 
 const Services = () => {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [wasteType, setWasteType] = useState('');
-  const [quantity, setQuantity] = useState('');
-  const [address, setAddress] = useState('');
-  const [collectionDate, setCollectionDate] = useState('');
+  const [isWasteCollectionModalOpen, setWasteCollectionModalOpen] = useState(false);
+  const [isInternshipModalOpen, setInternshipModalOpen] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const openWasteCollectionModal = () => {
+    setWasteCollectionModalOpen(true);
+  };
 
-    try {
-      const response = await fetch('http://localhost:3001/api/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, phone, email, wasteType, quantity, address, collectionDate }),
-      });
+  const closeWasteCollectionModal = () => {
+    setWasteCollectionModalOpen(false);
+  };
 
-      if (response.ok) {
-        console.log('Form submitted successfully!');
-        // Optionally reset the form fields here
-        setName('');
-        setPhone('');
-        setEmail('');
-        setWasteType('');
-        setQuantity('');
-        setAddress('');
-        setCollectionDate('');
-      } else {
-        console.error('Form submission failed!');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
+  const openInternshipModal = () => {
+    setInternshipModalOpen(true);
+  };
+
+  const closeInternshipModal = () => {
+    setInternshipModalOpen(false);
   };
 
   return (
-    <div>
-      <h2>Waste Collection Form</h2>
-      <form onSubmit={handleSubmit} className="waste-form">
-        <label>
-          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label>
-          Phone Number:
-          <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
-        </label>
-        <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <label>
-          Waste Type:
-          <input type="text" value={wasteType} onChange={(e) => setWasteType(e.target.value)} />
-        </label>
-        <label>
-          Quantity:
-          <input type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
-        </label>
-        <label>
-          Address:
-          <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
-        </label>
-        <label>
-          Collection Date:
-          <input type="date" value={collectionDate} onChange={(e) => setCollectionDate(e.target.value)} />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+    <div className="services-container">
+      <h1>Our Services</h1>
+
+      {/* Waste Collection Card */}
+      <div className="service-card" onClick={openWasteCollectionModal}>
+        <h2>Waste Collection Service</h2>
+        <p>Click to request waste collection.</p>
+      </div>
+
+      {/* Internship Card */}
+      <div className="service-card" onClick={openInternshipModal}>
+        <h2>Internship Program</h2>
+        <p>Apply for our internship program. Join us and learn!</p>
+      </div>
+
+      {/* Waste Collection Modal */}
+      {isWasteCollectionModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <span className="close-btn" onClick={closeWasteCollectionModal}>&times;</span>
+            <WasteCollectionForm />
+          </div>
+        </div>
+      )}
+
+      {/* Internship Modal */}
+      {isInternshipModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <span className="close-btn" onClick={closeInternshipModal}>&times;</span>
+            <InternshipForm />
+          </div>
+        </div>
+      )}
+      <h2>COLLECTION CENTRES</h2>
+      <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7857.374360284461!2d76.32787505!3d10.0426516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1701540738375!5m2!1sen!2s"></iframe></div>
     </div>
   );
 };

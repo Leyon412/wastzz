@@ -1,0 +1,38 @@
+/* WasteCollectionForm.css */
+
+.waste-collection-form {
+    max-width: 900px;
+    margin: 0 auto;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    input {
+      padding: 5px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

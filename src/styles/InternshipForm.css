@@ -1,0 +1,51 @@
+/* InternshipForm.css */
+
+.internship-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    margin-top :0px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .form-label {
+    margin: 0px 0;
+  }
+  
+  .form-input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .form-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .internship-form {
+      max-width: 100%;
+    }
+  
+    .form-input {
+      padding: 5px;
+    }
+  
+    .form-button {
+      font-size: 10px;
+    }
+  }
+  
