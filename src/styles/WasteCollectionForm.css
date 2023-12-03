@@ -1,23 +1,23 @@
 /* WasteCollectionForm.css */
 
 .waste-collection-form {
-    max-width: 900px;
+    max-width:500px;
     margin: 0 auto;
     transition: max-height 0.3s ease-out;
   }
   
-  label {
+  .label {
     display: block;
     margin-bottom: 0px;
   }
   
-  input {
+  .input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
   }
   
-  button {
+  .button {
     background-color: #4caf50;
     color: white;
     padding: 10px 15px;
