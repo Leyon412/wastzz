@@ -62,7 +62,7 @@ const Services = () => {
         </div>
       )}
       <h2>COLLECTION CENTRES</h2>
-      <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7857.374360284461!2d76.32787505!3d10.0426516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1701540738375!5m2!1sen!2s"></iframe></div>
+      <div><iframe src="https://www.google.com/maps/d/embed?mid=1pnS5Z4_otKx31PM2xHFiuSnrcaXnt5E&ehbc=2E312F"></iframe></div>
     </div>
   );
 };

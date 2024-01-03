@@ -14,8 +14,18 @@ const wasteTypes = [
   { name: 'Glass', image: glassImage, description: 'Glass waste is recyclable and can be reused indefinitely, making it a more environmentally friendly packaging material.' },
   { name: 'Organic', image: organicImage, description: 'Organic waste, such as food scraps and yard trimmings, can be composted to create nutrient-rich soil for gardening.' },
 ];
-const newsItems = ['Latest News 1', 'Latest News 2', 'Latest News 3'];
-const reductionStrategies = ['Recycling', 'Composting', 'Reusable Products'];
+
+const newsItems = [
+  { name: 'Latest News 1', description: 'Description for Latest News 1' },
+  { name: 'Latest News 2', description: 'Description for Latest News 2' },
+  { name: 'Latest News 3', description: 'Description for Latest News 3' },
+];
+
+const reductionStrategies = [
+  { name: 'Recycling', description: 'Description for Recycling' },
+  { name: 'Composting', description: 'Description for Composting' },
+  { name: 'Reusable Products', description: 'Description for Reusable Products' },
+];
 
 // Functional component for the About section
 const About = () => {
@@ -47,8 +57,8 @@ const About = () => {
         <h2>News</h2>
         <div className="card-container">
           {newsItems.map((news) => (
-            <div key={news} className="card" onClick={() => handleItemClick(news)}>
-              {news}
+            <div key={news.name} className="card" onClick={() => handleItemClick(news)}>
+              {news.name}
             </div>
           ))}
         </div>
@@ -59,18 +69,18 @@ const About = () => {
         <h2>Reduction Strategies</h2>
         <div className="card-container">
           {reductionStrategies.map((strategy) => (
-            <div key={strategy} className="card" onClick={() => handleItemClick(strategy)}>
-              {strategy}
+            <div key={strategy.name} className="card" onClick={() => handleItemClick(strategy)}>
+              {strategy.name}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Dislay Details in Larger Screen */}
+      {/* Display Details in Larger Screen */}
       {selectedItem && (
         <div className="details-container">
           <div className="details-card">
-            <h2>Details of {selectedItem.name || selectedItem}</h2>
+            <h2>Details of {selectedItem.name}</h2>
             {selectedItem.image && <img src={selectedItem.image} alt={selectedItem.name} />}
             <p>{selectedItem.description}</p>
             <button onClick={() => setSelectedItem(null)}>Close</button>
